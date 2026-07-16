@@ -1,74 +1,52 @@
-# 🎬 MovieLand
+# 🎬 MovieLand: Premium Movie Discovery App
 
-MovieLand is a sleek, responsive React web application that allows users to search for their favorite movies and TV shows. It utilizes the OMDb API to fetch and display movie posters, titles, years, and types in a beautiful, grid-based layout.
+MovieLand is a highly interactive, beautifully designed movie discovery web application built with modern React. It allows users to search, filter, and save their favorite movies, series, and episodes using the OMDb API. 
+
+This project was built with a heavy focus on **performance**, **scalability**, and **premium UI/UX**, showcasing advanced React architectural patterns and modern web APIs.
 
 ## ✨ Features
 
-- **Search Functionality:** Easily search for any movie or TV series.
-- **Responsive Design:** Fully responsive layout that looks great on mobile, tablet, and desktop screens.
-- **Dynamic Data:** Fetches real-time data from the [OMDb API](http://www.omdbapi.com/).
-- **Modern UI/UX:** Features a sleek dark mode theme with glassmorphism effects and smooth hover animations.
-- **Interactive States:** Includes loading spinners and error handling for a seamless user experience.
-
-## 🚀 Live Demo
-*(You can add your deployed link here)*
+- 🎙️ **Voice Search Integration:** Uses the native browser Web Speech API to allow users to search for movies entirely hands-free.
+- ⚡ **Debounced Auto-Search:** Automatically fetches results as you type with an 800ms debounce to prevent unnecessary API calls and rate limiting.
+- 🔗 **Shareable Links:** Implements native History API syncing to update the URL dynamically (`?movie=tt1234567`). Copying and sharing the link instantly opens the exact movie modal for the recipient.
+- 💖 **Favorites Watchlist:** Users can add movies to their personal favorites tab, which is persistently stored using a custom `localStorage` hook.
+- 🎬 **Trailer Integration:** Direct integration with YouTube search to instantly find and play official trailers for any specific movie.
+- 🦴 **Cinematic Skeleton Loaders:** Uses highly polished, animated skeleton cards that mirror the movie grid to provide a premium loading experience.
+- 📱 **Responsive Glassmorphism UI:** Features a completely custom-built CSS architecture utilizing frosted glass effects, cinematic ambient background glows, and sleek, fluid animations.
+- 🛡️ **Robust Fallbacks:** Implements reliable `onError` image handlers to substitute broken API poster links with high-quality cinematic placeholder images.
 
 ## 🛠️ Tech Stack
 
-- **React.js** - Frontend JavaScript library
-- **Vanilla CSS** - Styling and animations
-- **OMDb API** - Movie data source
+- **Framework:** React 18 (migrated from CRA to **Vite** for optimized HMR and build speeds).
+- **Styling:** Vanilla CSS3 (Custom properties, Flexbox/Grid, Animations, Glassmorphism).
+- **Data Fetching:** Fetch API interacting with the [OMDb API](http://www.omdbapi.com/).
 
-## ⚙️ Getting Started
 
-### Prerequisites
+## 🚀 Running Locally
 
-You will need Node.js installed on your machine. You will also need to get a free API key from OMDb API.
-
-### Installation
-
-1. **Clone the repository:**
+1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/react-movie-project.git
-   cd react-movie-project
+   git clone https://github.com/Het15Shah/MovieLand.git
    ```
-
-2. **Install dependencies:**
+2. Navigate into the directory:
+   ```bash
+   cd movieland
+   ```
+3. Install dependencies:
    ```bash
    npm install
    ```
-
-3. **Set up Environment Variables:**
+4. Set up your environment variables:
    - Create a `.env` file in the root directory.
    - Add your OMDb API key:
      ```env
-     REACT_APP_API_URL=https://www.omdbapi.com?apikey=YOUR_API_KEY
+     VITE_API_URL=https://www.omdbapi.com?apikey=YOUR_KEY_HERE
      ```
-
-4. **Run the application:**
+5. Start the Vite development server:
    ```bash
-   npm start
+   npm run dev
    ```
-   The app will run in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-## 📂 Project Structure
-
-```text
-├── public/          # Public assets and index.html
-├── src/
-│   ├── App.css      # Global styles and responsive rules
-│   ├── App.js       # Main application component and API logic
-│   ├── index.js     # React application entry point
-│   ├── MovieCard.jsx# Reusable movie display component
-│   └── search.svg   # Search icon asset
-├── .env             # Environment variables (API Key)
-└── package.json     # Project metadata and dependencies
-```
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](#).
-
-## 📝 License
-
-This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
+Contributions, issues, and feature requests are welcome!
