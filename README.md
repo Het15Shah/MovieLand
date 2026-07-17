@@ -1,5 +1,7 @@
 # 🎬 MovieLand: Premium Movie Discovery App
 
+**🚀 Live Demo:** [https://movieland-rho-seven.vercel.app/](https://movieland-rho-seven.vercel.app/)
+
 MovieLand is a highly interactive, beautifully designed movie discovery web application built with modern React. It allows users to search, filter, and save their favorite movies, series, and episodes using the OMDb API. 
 
 This project was built with a heavy focus on **performance**, **scalability**, and **premium UI/UX**, showcasing advanced React architectural patterns and modern web APIs.
